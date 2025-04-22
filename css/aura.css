@@ -1,0 +1,218 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+@font-face {
+    font-family: 'Muller';
+    src: local('Muller Bold'), url(fonts/) format('woff2'), url(/fonts/MullerBold.woff) format("woff");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Muller';
+    src: local('Muller Light'), url(fonts/MullerLight.woff2) format("woff2"), url(/fonts/MullerLight.woff) format("woff");
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Muller';
+    src: local('Muller Medium'), url(/fonts/MullerMedium.woff2) format("woff2"), url(/fonts/MullerMedium.woff) format("woff");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Muller';
+    src: local('Muller Regular'), url(/fonts/MullerRegular.woff2) format("woff2"), url(/fonts/MullerRegular.woff) format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Russo';
+    src: local('Rosso Regular'), url(/fonts/RussoOne-Regular.ttf) format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --defoult-black-color: #07060B;
+    --color-white: #FFFFFF;
+    --button-gradient: linear-gradient(to bottom, #46F4DB, #57D272);
+    --border-radius-nav: 77px;
+    --border-radius-btn: 40px;
+    --hover: #46F4DB;
+    --active: #57D272;
+    --focus: 2px solid #57D272;
+}
+
+body {
+    font-family: 'Muller';
+    max-width: 1920px;
+    margin: 0 auto;
+  }
+  
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  input,
+  textarea {
+    padding: 0;
+    margin: 0;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .btn {
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+}
+
+  .flex {
+    display: flex;
+  }
+
+  .burger {
+    display: none;
+  }
+
+  /* header */
+  .header {
+    width: 100%;
+    max-height: 80px;
+    justify-content: center;
+  }
+
+  .header__container {
+    width: calc(100% - 640px);
+  }
+
+  .header__nav {
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header__logo {
+    width: 100px;
+    height: 40px;
+    margin: 20px 74px 20px 0;
+  }
+
+  .nav__list {
+    gap: 36px;
+    padding-right: 42px;
+  }
+
+  .nav__link {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 100%;
+  }
+
+  .header__btn {
+    max-width: 132px;
+    min-height: 50px;
+    padding: 17px 31px;
+    background-color: var(--defoult-black-color);
+    border-radius: var(--border-radius-nav);
+    color: var(--color-white);
+  }
+
+  /* hero */
+  .hero {
+    width: 100%;
+    min-height: 680px;
+    align-items: center;
+    background-color: var(--defoult-black-color);
+    background-image: url(/img/stickers_hero.png);
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: right center;
+    overflow: hidden;
+  }
+
+  .hero__container {
+    width: calc(100% - 640px);
+    margin: 0 auto;
+  }
+
+  .hero__content {
+    flex-direction: column;
+    max-width: 621px;
+    max-height: 360px;
+  }
+
+  .hero__title {
+    margin-bottom: 37px;
+    font-family: 'Russo';
+    font-size: 70px;
+    line-height: 120%;
+    color: var(--color-white);
+  }
+
+  .hero__btn_group {
+    gap: 32px;
+  }
+
+  .hero__btn {
+    max-width: 176px;
+    min-height: 70px;
+    padding: 25px 54px;
+    background: var(--button-gradient);
+    border-radius: var(--border-radius-btn);
+    font-size: 20px;
+    color: var(--defoult-black-color);
+  }
+
+  .hero__btn_two {
+    max-width: 247px;
+    min-height: 70px;
+    padding: 25px 54px;
+    background: var(--button-gradient);
+    border-radius: var(--border-radius-btn);
+    font-size: 20px;
+    color: var(--color-white);
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero__btn_two::before {
+    content: '';
+    position: absolute;
+    top: 5px; left: 5px; right: 5px; bottom: 5px;
+    background: var(--defoult-black-color);
+    border-radius: var(--border-radius-btn);
+    z-index: -1;
+
+  }

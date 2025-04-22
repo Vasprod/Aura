@@ -1,0 +1,13 @@
+@media (min-width: 1024px) and (max-width: 1279px) {
+    .header__container {
+        width: calc(100% - 72px);
+    }
+    
+    .hero {
+        background-image: url(/img/stickers_hero\ \(1\).png);
+    }
+
+    .hero__container {
+        width: calc(100% - 72px);
+    }
+}

@@ -1,0 +1,55 @@
+@media (min-width: 310px) and (max-width: 479px) {
+    .header__container {
+        width: calc(100% - 24px);
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .hero {
+        min-height: 531px;
+        align-items: start;
+        justify-content: center;
+        background-image: url(/img/stickers_hero\ \(2\).png);
+        background-position: bottom;
+    }
+
+    .header__nav {
+        display: none;
+    }
+
+    .burger {
+        display: flex;
+    }
+
+    .hero__container {
+        width: calc(100% - 24px);
+        margin: 0;
+    }
+
+    .hero__title {
+        font-size: 35px;
+        font-weight: 300;
+        margin-top: 64px;
+        margin-bottom: 16px;
+    }
+
+    .hero__btn_group {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .hero__btn {
+        max-width: 132px;
+        min-height: 50px;
+        padding: 17px 38px;
+        font-size: 16px;
+      }
+    
+      .hero__btn_two {
+        max-width: 164px;
+        min-height: 50px;
+        padding: 17px 26px;
+        font-size: 16px;
+      }
+  }
