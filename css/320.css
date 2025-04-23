@@ -11,14 +11,54 @@
         justify-content: center;
         background-image: url(/img/stickers_hero\ \(2\).png);
         background-position: bottom;
+        background-size: contain;
     }
 
     .header__nav {
         display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 65%;
+        position: absolute;
+        padding: 85px 0 48px 0;
+        top: 5px;
+        right: 15px;
+        background-image: url(/img/Frame\ 29.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: bottom;
+        background-color: #EDEDF2;
+        border-radius: 16px;
+        box-shadow: -26px 0px 84px 0px rgba(34, 60, 80, 0.33);
+        z-index: 5;
+    }
+
+    .header__nav.active {
+        display: flex;
+    }
+
+    .header__nav.active .nav__list {
+        flex-direction: column;
+        margin-bottom: 48px;
+        padding: 0;
+    }
+
+    .header__nav.active .header__btn {
+        box-shadow: 1px 2px 30px 8px rgba(77, 229, 169, 0.37);
     }
 
     .burger {
         display: flex;
+        position: relative;
+        z-index: 6;
+    }
+
+    #icon {
+        transition: transform 0.3s ease;
+    }
+      
+    #icon.rotated {
+        transform: rotate(90deg) scale(0.8);
     }
 
     .hero__container {

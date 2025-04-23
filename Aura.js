@@ -24,3 +24,15 @@ links.forEach(link => {
     button.style.boxShadow = 'none';
   });
 });
+
+
+document.addEventListener('DOMContentLoaded',()=> {
+  const burger = document.querySelector('.burger');
+  const nav = document.querySelector('.header__nav');
+  const icon = document.getElementById('icon');
+
+  burger.addEventListener('click', () => {
+    icon.classList.toggle('rotated');
+    nav.classList.toggle('active');
+  })
+})
